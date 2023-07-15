@@ -6,7 +6,7 @@ import TheWelcome from './components/TheWelcome.vue'
 const testData = ref('')
 onMounted(async () => {
   const response = await fetch(
-    'https://test.api.anyask.ai/biz-center/api/categories',
+    'http://localhost:8888/agents/827/functions',
     {
       method: 'GET',
       headers: {
