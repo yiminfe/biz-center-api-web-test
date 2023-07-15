@@ -6,14 +6,14 @@ import TheWelcome from './components/TheWelcome.vue'
 const testData = ref('')
 onMounted(async () => {
   const response = await fetch(
-    'http://localhost:8888/agents/827/functions',
+    'https://test.api.anyask.ai/agents/827/functions',
     {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAxNX0.KQXuGWji2wUJm3WSG1xFuN7K4FFcEz8q4j6aDn0rMsI'
       },
       credentials: 'include',
-      mode: 'cors',
       keepalive: true
     }
   )
